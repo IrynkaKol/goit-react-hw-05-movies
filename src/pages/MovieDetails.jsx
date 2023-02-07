@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
-import { Outlet, useParams } from 'react-router';
+import { Outlet, useParams, useNavigate, useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import { fetchMovieById } from '../services/apiService';
-import {BASE_IMG_URL} from '../services/constans'
+import { BASE_IMG_URL } from '../services/constans';
 
 export const MoviesDeteils = () => {
   const [movieData, setMovieData] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
   const { id } = useParams();
 
   useEffect(() => {
@@ -13,6 +15,12 @@ export const MoviesDeteils = () => {
       setMovieData(resp); //console.log(resp)
     });
   }, [id]);
+
+  const handleGoBack = () => {
+    //console.log(location)
+    navigate(location.state.from);
+  };
+
   if (!movieData) {
     return (
       <div>
@@ -22,18 +30,21 @@ export const MoviesDeteils = () => {
   }
   return (
     <div
-style={{
-    display: 'flex',
-    flexDirection: 'column',
-}
-
-}    >
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
       <h1>Movies Deteils</h1>
-      <button>go back</button>
-      <img src={BASE_IMG_URL + movieData.poster_path} alt="" width='300' />
-      <NavLink to='cast'>cast</NavLink>
-      <NavLink to='reviews'>reviews</NavLink>
-      <Outlet/>
+      <button onClick={handleGoBack}>go back</button>
+      <img src={BASE_IMG_URL + movieData.poster_path} alt="" width="300" />
+      <NavLink to="cast" state={{ from: location.state.from }}>
+        cast
+      </NavLink>
+      <NavLink to="reviews" state={{ from: location.state.from }}>
+        reviews
+      </NavLink>
+      <Outlet />
     </div>
   );
 };

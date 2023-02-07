@@ -1,13 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import {Navigation} from '../Navigation/Navigation';
-import { Home } from "pages/Home";
+//import { Home } from "pages/Home";
 import { Movies } from "pages/Movies";
 import { MoviesDeteils } from "pages/MovieDetails";
 import { Cast } from "components/Cast/Cast";
 import { Reviews } from "components/Reviews/Reviews";
 //import {NotFound} from 'pages/NotFound'
+import { lazy } from "react";
 
-
+const Home = lazy(()  => import('pages/Home'))
 export const App = () => {
   return (
     <div>

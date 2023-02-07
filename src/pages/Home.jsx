@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { fetchDayTrend } from '../services/apiService';
 import { MoviesList } from '../components/MoviesList/MoviesList';
 
-export const Home = () => {
+ const Home = () => {
   const [movies, setMovies] = useState([]);
+  const[isLoading, setLoading] = useState(true)
 
   useEffect(() => {
     (async () => {
@@ -12,9 +13,21 @@ export const Home = () => {
         setMovies(results); //results деструктуризація із resp.data
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoading(false)
       }
     })();
   }, []);
+
+  if(isLoading) {
+    return (
+<div>
+  <h1>Loading...</h1>
+</div>
+    )
+
+  }
+
   return (
     <div>
       <h1>Home</h1>
@@ -22,3 +35,6 @@ export const Home = () => {
     </div>
   );
 };
+
+
+export default Home

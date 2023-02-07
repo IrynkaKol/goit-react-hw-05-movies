@@ -9,6 +9,8 @@ export const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('query');
 
+  
+
   useEffect(() => {
     if(!searchQuery) {
         return
@@ -20,6 +22,9 @@ export const Movies = () => {
 
       } catch (error) {
         console.log(error);
+      }
+      finally {
+        setQuere(searchQuery)
       }
     })();
   }, [searchQuery]);
