@@ -12,6 +12,9 @@ export const Reviews = () => {
 
   return (
     <div>
+        {reviews?.length === 0 && (
+            <p>We don't have any reviews for this movie</p>
+        )}
       <h1>Reviws</h1>
       {reviews.map(review => (
         <li key={review.id}>
