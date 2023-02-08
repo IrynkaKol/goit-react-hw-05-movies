@@ -32,3 +32,13 @@ export const fetchCastInfo = async (movieId) => {
     return resp.data.cast
   
 }
+
+export const fetchReviewsInfo = async (movieId) => {
+
+  const resp = await axios.get(
+    `movie/${movieId}/reviews?api_key=${apiKey}&language=en-US`
+  );
+  return resp.data.results
+
+
+}

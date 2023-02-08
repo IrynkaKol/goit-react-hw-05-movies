@@ -15,9 +15,11 @@ export const Cast = () => {
       <h1>Cast</h1>
       {cast.map(actor => (
         <li key={actor.id}>
-          <img src={BASE_IMG_URL + actor.profile_path} alt="" />
+          <img src={BASE_IMG_URL + actor.profile_path} alt="" width='300'/>
           {actor.name}
+          character: {actor.character}
         </li>
+        
       ))}
     </div>
   );
