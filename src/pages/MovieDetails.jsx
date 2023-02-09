@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { fetchMovieById } from '../services/apiService';
 import { BASE_IMG_URL } from '../services/constans';
 
-import { Container } from './MovieDetails.styled';
+import { Details, About, Button} from './MovieDetails.styled';
 
 const MoviesDeteils = () => {
   const [movieData, setMovieData] = useState(null);
@@ -33,14 +33,18 @@ const MoviesDeteils = () => {
   }
   return (
     <div>
-      <button onClick={handleGoBack}>go back</button>
-      <img src={BASE_IMG_URL + movieData.poster_path} alt="" width="150" />
-      <div>
-        <h1>
+      <Button onClick={handleGoBack}>go back</Button>
+      <Details>
+        <div>
+      <img src={BASE_IMG_URL + movieData.poster_path} alt="" width="300" />
+      
+      </div>
+      <About>
+        <h2>
           {movieData.title} (
           {movieData.release_date ? movieData.release_date.substring(0, 4) : ''}
           )
-        </h1>
+        </h2>
 
         <p>
           User Score: {''}
@@ -50,26 +54,33 @@ const MoviesDeteils = () => {
           %
         </p>
 
-        <h2>Overview</h2>
+        <h3>Overview</h3>
         <p>{movieData.overview}</p>
 
-        <h3>Genres</h3>
+        <h4>Genres</h4>
         <p>
           {movieData.genres
             ? movieData.genres.map(genre => genre.name).join('')
             : ''}
         </p>
-      </div>
-      <Container>
-        <h2>Additional information</h2>
+        </About>
+      </Details>
+      <div>
+        <h4>Additional information</h4>
+        <ul>
+          <li>
         <NavLink to="cast" state={{ from: location.state.from }}>
-          cast
+          Cast
         </NavLink>
+        </li>
+        <li>
         <NavLink to="reviews" state={{ from: location.state.from }}>
-          reviews
+          Reviews
         </NavLink>
+        </li>
         <Outlet />
-      </Container>
+        </ul>
+      </div>
     </div>
   );
 };

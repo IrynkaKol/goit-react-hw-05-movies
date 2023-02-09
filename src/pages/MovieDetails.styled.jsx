@@ -1,7 +1,16 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div`
+export const Details = styled.div`
 display: flex;
-flex-direction: column;
 border-bottom: 3px solid grey;
 `;
+
+export const Button = styled.button`
+display: block;
+`
+
+export const About = styled.div`
+padding-left: 20px;
+`
+
+

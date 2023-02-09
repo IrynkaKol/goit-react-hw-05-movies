@@ -3,6 +3,8 @@ import { useParams } from 'react-router';
 import { fetchCastInfo } from '../../services/apiService';
 import { BASE_IMG_URL } from '../../services/constans';
 
+import {Container} from './Cast.styled'
+
 const Cast = () => {
   const { id } = useParams();
   const [cast, setCast] = useState([]);
@@ -11,7 +13,7 @@ const Cast = () => {
   }, [id]);
 
   return (
-    <div>
+    <Container>
       
       {cast.map(actor => (
         <li key={actor.id}>
@@ -21,7 +23,7 @@ const Cast = () => {
         </li>
         
       ))}
-    </div>
+    </Container>
   );
 };
 
