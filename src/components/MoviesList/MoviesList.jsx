@@ -5,6 +5,7 @@ export const MoviesList = ({ movies }) => {
   const location = useLocation();
   return (
     <ul>
+      
       {movies.map(movie => (
         <li key={movie.id}>
           <NavLink
