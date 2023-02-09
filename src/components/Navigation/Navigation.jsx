@@ -1,10 +1,13 @@
-import { NavLink } from "react-router-dom"
+
+import {Container, Header, Link} from './Navigation.stzled'
 
 export const Navigation = () => {
     return (
-        <div>
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='movies'>Movies</NavLink>
-        </div>
+        <Container>
+            <Header>
+            <Link to='/'>Home</Link>
+            <Link to='movies'>Movies</Link>
+            </Header>
+        </Container>
     )
 }

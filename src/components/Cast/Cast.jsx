@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import { fetchCastInfo } from '../../services/apiService';
 import { BASE_IMG_URL } from '../../services/constans';
 
-export const Cast = () => {
+const Cast = () => {
   const { id } = useParams();
   const [cast, setCast] = useState([]);
   useEffect(() => {
@@ -15,7 +15,7 @@ export const Cast = () => {
       <h1>Cast</h1>
       {cast.map(actor => (
         <li key={actor.id}>
-          <img src={BASE_IMG_URL + actor.profile_path} alt="" width='300'/>
+          <img src={BASE_IMG_URL + actor.profile_path} alt="" width='150'/>
           {actor.name}
           character: {actor.character}
         </li>
@@ -24,3 +24,6 @@ export const Cast = () => {
     </div>
   );
 };
+
+
+export default Cast
