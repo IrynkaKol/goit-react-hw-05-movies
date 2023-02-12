@@ -7,6 +7,8 @@ import {Navigation} from '../Navigation/Navigation';
 //import  Reviews  from "components/Reviews/Reviews";
 //import NotFound from 'pages/NotFound'
 import { lazy,Suspense } from "react";
+import Loader from "components/Loader/Loader";
+ 
 
 const Home = lazy(()  => import('pages/Home'));
 const Movies = lazy(() => import('pages/Movies'));
@@ -19,7 +21,7 @@ const NotFound = lazy(() => import('pages/NotFound'))
 
 export const App = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader/>}>
     <div>
       <Navigation/>
       

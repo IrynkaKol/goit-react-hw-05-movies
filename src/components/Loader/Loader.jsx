@@ -1,7 +1,7 @@
 import React from 'react';
 import {LoaderStyled} from './Loader.styled'
 
-export const Loader = () => {
+const Loader = () => {
     return (
         <LoaderStyled
   visible={true}
@@ -15,3 +15,4 @@ export const Loader = () => {
     )
 }
 
+export default Loader;

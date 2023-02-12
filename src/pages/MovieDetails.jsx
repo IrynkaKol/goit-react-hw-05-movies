@@ -1,3 +1,4 @@
+import Loader from 'components/Loader/Loader';
 import { useEffect, useState } from 'react';
 import { Outlet, useParams, useNavigate, useLocation } from 'react-router';
 
@@ -28,7 +29,7 @@ const MoviesDeteils = () => {
   if (!movieData) {
     return (
       <div>
-        <h1>Loading data ...</h1>
+        <h1><Loader/></h1>
       </div>
     );
   }
