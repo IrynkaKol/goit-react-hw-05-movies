@@ -1,13 +1,27 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.c419ee4c.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.efbea3cc.js",
+    "static/js/415.535d38a6.chunk.js": "/goit-react-hw-05-movies/static/js/415.535d38a6.chunk.js",
+    "static/js/134.f9de27e9.chunk.js": "/goit-react-hw-05-movies/static/js/134.f9de27e9.chunk.js",
+    "static/js/439.32e94ba5.chunk.js": "/goit-react-hw-05-movies/static/js/439.32e94ba5.chunk.js",
+    "static/js/736.9faecaba.chunk.js": "/goit-react-hw-05-movies/static/js/736.9faecaba.chunk.js",
+    "static/js/387.b108a390.chunk.js": "/goit-react-hw-05-movies/static/js/387.b108a390.chunk.js",
+    "static/js/805.9067f512.chunk.js": "/goit-react-hw-05-movies/static/js/805.9067f512.chunk.js",
+    "static/js/396.633729a4.chunk.js": "/goit-react-hw-05-movies/static/js/396.633729a4.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.c419ee4c.js.map": "/goit-react-hw-05-movies/static/js/main.c419ee4c.js.map"
+    "main.efbea3cc.js.map": "/goit-react-hw-05-movies/static/js/main.efbea3cc.js.map",
+    "415.535d38a6.chunk.js.map": "/goit-react-hw-05-movies/static/js/415.535d38a6.chunk.js.map",
+    "134.f9de27e9.chunk.js.map": "/goit-react-hw-05-movies/static/js/134.f9de27e9.chunk.js.map",
+    "439.32e94ba5.chunk.js.map": "/goit-react-hw-05-movies/static/js/439.32e94ba5.chunk.js.map",
+    "736.9faecaba.chunk.js.map": "/goit-react-hw-05-movies/static/js/736.9faecaba.chunk.js.map",
+    "387.b108a390.chunk.js.map": "/goit-react-hw-05-movies/static/js/387.b108a390.chunk.js.map",
+    "805.9067f512.chunk.js.map": "/goit-react-hw-05-movies/static/js/805.9067f512.chunk.js.map",
+    "396.633729a4.chunk.js.map": "/goit-react-hw-05-movies/static/js/396.633729a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.c419ee4c.js"
+    "static/js/main.efbea3cc.js"
   ]
 }
