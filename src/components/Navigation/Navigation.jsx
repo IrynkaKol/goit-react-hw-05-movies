@@ -1,5 +1,5 @@
 
-import {Container, Header, Link} from './Navigation.stzled'
+import {Container, Header, Link} from './Navigation.styled'
 
 export const Navigation = () => {
     return (

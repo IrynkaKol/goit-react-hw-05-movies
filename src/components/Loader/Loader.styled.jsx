@@ -6,5 +6,6 @@ export const LoaderStyled = styled(ColorRing)`
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-   
+  margin-left: auto;
+  margin-right: auto;
 `;
