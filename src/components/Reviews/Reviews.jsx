@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { fetchReviewsInfo } from '../../services/apiService';
 
+import {Container} from './Reviews.styled'
+
 const Reviews = () => {
   const { id } = useParams();
   const [reviews, setReviews] = useState([]);
@@ -11,7 +13,7 @@ const Reviews = () => {
   }, [id]);
 
   return (
-    <div>
+    <Container>
         {reviews?.length === 0 && (
             <p>We don't have any reviews for this movie</p>
         )}
@@ -22,7 +24,7 @@ const Reviews = () => {
             <p>{review.content}</p>
         </li>
       ))}
-    </div>
+    </Container>
   );
 };
 

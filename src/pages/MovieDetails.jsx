@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Outlet, useParams, useNavigate, useLocation } from 'react-router';
-import { NavLink } from 'react-router-dom';
+
 import { fetchMovieById } from '../services/apiService';
 import { BASE_IMG_URL } from '../services/constans';
 
-import { Details, About, Button} from './MovieDetails.styled';
+import { Details, About, Button, Link} from './MovieDetails.styled';
+
 
 const MoviesDeteils = () => {
   const [movieData, setMovieData] = useState(null);
@@ -69,14 +70,14 @@ const MoviesDeteils = () => {
         <h4>Additional information</h4>
         <ul>
           <li>
-        <NavLink to="cast" state={{ from: location.state.from }}>
+        <Link to="cast" state={{ from: location.state.from }}>
           Cast
-        </NavLink>
+        </Link>
         </li>
         <li>
-        <NavLink to="reviews" state={{ from: location.state.from }}>
+        <Link to="reviews" state={{ from: location.state.from }}>
           Reviews
-        </NavLink>
+        </Link>
         </li>
         <Outlet />
         </ul>
